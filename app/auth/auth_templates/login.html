@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="login-title">Let's see those credentials!</h1>
+
+<div class="login-container">
+    <div class="row justify-content-center">
+        <form method="POST" class="col-4">
+            {{ form.hidden_tag() }}
+
+            {{ form.username(class='l_username form-control', placeholder='Username') }}
+            {{ form.password(class='l_password form-control', placeholder='Password') }}
+            {{ form.submit(class='btn btn-danger') }}
+            <p class = "make-account">Don't have an account? <a class="register-tag text-decoration-line" href="{{url_for('auth.registerPage')}}">Register</a></p>
+
+        </form>
+
+    </div>
+</div>
+
+
+{% endblock %}

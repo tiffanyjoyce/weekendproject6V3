@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col">
+  {% for p in products %}
+  <div class="cart-card col-sm-2 mb-2" id="roster">
+    <div class="c-card">
+      <img src="{{ p.img_url }}" class="card-img-top" alt="{{ p.name }}">
+      <div class="card-body">
+        <h5 class="cart-card-title">{{ p.name }}</h5>
+        <p class="cart-card-text">Price:
+        <p class="price">${{ p.price }}</p>
+        </p>
+        <p class="cart-card-text">Description: {{ p.description }}</p>
+        <p class="cart-card-text">Category: {{ p.category }}</p>
+        <p class="cart-card-text">Rating: {{ p.rating }}</p>
+        <p class="cart-card-text">Quantity: {{ count }}</p>
+        <div class="button-row row">
+          <a class="sub-button text-decoration-none" href="{{url_for('products.remove', product_id=p.id)}}">-</a>
+          <a class="add-button text-decoration-none" href="#">+</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+    <h5 class="subtotal">Subtotal: ${{ total }}</h5>
+    <a href="{{ url_for('products.remove_all')}}" class="empty-button btn btn-danger">Empty cart</a>
+    <a href=# class="checkout-button btn btn-light">Checkout</a>
+  {% if not current_user.cart %}
+  <h5 class='empty'>Your cart is empty</h5>
+  {% endif %}
+</div>
+
+
+{% include 'footer.html' %}
+{% endblock %}

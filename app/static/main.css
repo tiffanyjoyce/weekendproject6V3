@@ -1,0 +1,179 @@
+body {
+    font-family: 'Quantico', sans-serif;
+    min-height: calc(100vh - 70px);
+    background-color: black;
+}
+.footer{
+    height: 50px;
+}
+.navbar {
+    background-color: black;
+    color: white;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+}
+.navbar:hover{
+    color: red!important;
+}
+.navbar-bar:hover{
+    color: red!important;
+}
+.navbar-nav {
+    display: flex;
+    font-weight: 300px;
+    font-size: 16pt;
+    width: 100%;
+    margin-left: 200px;
+    gap: 20px;
+    overflow: hidden;
+}
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+.nav-link:hover {
+    color: red;
+}
+.navbar-brand {
+    position: absolute;
+    overflow: hidden;
+}
+.product-card{
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 25px;
+}
+.register_title{
+    text-align: center;
+    padding-top: 20px; 
+    color: white;
+}
+.r_username{
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+.r_email{
+    margin-bottom: 25px;
+}
+.r_password{
+    margin-bottom: 25px;
+}
+.r_confirm{
+    margin-bottom: 25px;
+}
+.r_submit{
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.login-title{
+    text-align: center;
+    margin-top: 25px;
+    color: white;
+}
+.l_username {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.l_password{
+    margin-bottom: 20px;
+}
+.l_submit{
+    margin-bottom: 20px;
+}
+.s-product-card{
+    background-color: black;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top:20px;
+    min-width: 300px;
+    width: 700px;
+}
+.make-account{
+    padding-top: 20px;
+    color: white;
+}
+.register-tag{
+    color: red;
+}
+.cart-card{
+    width: 700px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background-color: black;
+}
+.c-card{
+    background-color: black;
+}
+.cart-card-title{
+    color: white;
+}
+.cart-card-text{
+    color: white;
+}
+.empty-button {
+    width: 300px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+.checkout-button {
+    width: 300px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+.add-button{
+    display:block;
+    height: 25px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid red;
+    text-align: center;
+    color: white;
+}
+.sub-button{
+    display:block;
+    height: 25px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid red;
+    text-align: center;
+    color: white;
+    margin-left: 10px;
+}
+.empty {
+    padding: 200px;
+    text-align: center;
+    color: white;
+}
+.button-row{
+    min-height: 20px;
+    gap: 5px;
+}
+.sp-card-text{
+    color: white;
+}
+.sp-card-title{
+    color: white;
+}
+.p-card-title{
+    color: white;
+}
+.p-card-text{
+    color:white;
+}
+.subtotal{
+    color: white;
+}
+.button-row{
+    display: flex;
+}
+.price{
+    color: rgb(161, 44, 44);
+}

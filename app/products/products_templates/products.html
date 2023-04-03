@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="row">
+    {% for p in product_list %}
+      <div class="row-sm-2 mb-2" id="roster">
+        <div class="product-card">
+          <img src="{{ p.img_url }}" class="card-img-top" alt="{{ p.name }}">
+          <div class="card-body">
+            <h5 class="p-card-title">{{ p.name }}</h5>
+            <p class="p-card-text">Price: <p class="price">${{ p.price }}</p>
+            <p class="p-card-text">Description: {{ p.description }}</p>
+            <p class="p-card-text">Category: {{ p.category }}</p>
+            <p class="p-card-text">Rating: {{ p.rating }}</p>
+            <form method="POST">
+              <a href="{{ url_for('products.single_product', product_id=p.id) }}" class="btn btn-outline-danger">View Item</a>
+              {% if current_user.is_authenticated %}
+              <a href="{{ url_for('products.add_to_cart', product_id=p.id) }}" class="btn btn-outline-light">Add to cart</a>
+              {% endif %}
+              {% if not current_user.is_authenticated %}
+              <a href="{{ url_for('auth.loginPage', product_id=p.id) }}" class="btn btn-outline-light">Add to cart</a>
+              {% endif %}
+          </form>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+
+{% include 'footer.html' %}
+{% endblock %}

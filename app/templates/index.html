@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div id="hero" style="text-align: center; position: relative;">
+  <video
+        loop
+        muted
+        autoplay
+        preload="auto"
+        style="width: 100%; height: auto; z-index: -1;">
+            <source src="{{ url_for('static',filename = 'video.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+  </video>
+  <h1 style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); z-index: 5; font-size: 2rem; color: black;">From China to our warehouse to your front door</h1>
+  <h2 style="position: absolute; top: 15%; left: 50%; transform: translate(-50%, -50%); z-index: 10; font-size: 4rem; color: black;">Hello Shopper</h2>
+</div>
+
+{% include 'footer.html' %}
+
+
+{% endblock %}
